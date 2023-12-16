@@ -46,7 +46,7 @@ ResultSet rs = null;
     dt.setRowCount(0);
     BillId.setText("");
     CustNamelbl.setText("Customer Name");
-    Amttbl.setText("Amount");
+    Amount.setText("Amount");
     Qtytb.setText("");
     PriceBtl.setText("");
     GetToday();
@@ -134,12 +134,12 @@ ResultSet rs = null;
     }
 
     String totalQuantity = "\nTotal Quantity: " + Qtytxt.getText() + "\n";
-    String totalAmount = "Total Amount: " + Amttbl.getText() + "\n";
+    String totalAmount = "Total Amount: " + Amount.getText() + "\n";
 
     String footer = "\n==================== Thank You! =========================";
 
     String cashReceived = "Cash Received: " + cashField.getText() + "\n";
-    int totalAmountValue = Integer.parseInt(Amttbl.getText());
+    int totalAmountValue = Integer.parseInt(Amount.getText());
     int cashReceivedValue = Integer.parseInt(cashField.getText());
     int changeValue = cashReceivedValue - totalAmountValue;
     String change = "Change: " + changeValue + "";
@@ -263,7 +263,6 @@ private void printReceipt(String receipt) {
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
@@ -286,11 +285,11 @@ private void printReceipt(String receipt) {
         Qtytb = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
         AddBtn1 = new javax.swing.JButton();
-        Amttbl = new javax.swing.JLabel();
-        PrintBtn = new javax.swing.JButton();
+        Amount = new javax.swing.JLabel();
         Qtytxt = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
+        Amttbl = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -357,10 +356,6 @@ private void printReceipt(String receipt) {
         jLabel15.setForeground(new java.awt.Color(153, 153, 153));
         jLabel15.setText("USER STAFF");
 
-        jLabel16.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
-        jLabel16.setForeground(new java.awt.Color(153, 153, 153));
-        jLabel16.setText(" EXIT PROGRAM");
-
         jLabel17.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLabel17.setForeground(new java.awt.Color(153, 153, 153));
         jLabel17.setText("VIEW ORDER");
@@ -376,21 +371,16 @@ private void printReceipt(String receipt) {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel15, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel14, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel13, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel11, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel17, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel3Layout.createSequentialGroup()
-                                .addGap(12, 12, 12)
-                                .addComponent(jLabel10))))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel16)))
+                .addGap(20, 20, 20)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel15, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel14, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel13, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel11, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel17, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel3Layout.createSequentialGroup()
+                        .addGap(12, 12, 12)
+                        .addComponent(jLabel10)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
@@ -409,9 +399,7 @@ private void printReceipt(String receipt) {
                 .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 88, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         jLabel5.setBackground(new java.awt.Color(0, 0, 0));
@@ -595,26 +583,10 @@ private void printReceipt(String receipt) {
             }
         });
 
-        Amttbl.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        Amttbl.setForeground(new java.awt.Color(51, 51, 51));
-        Amttbl.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Amttbl.setText("Amount");
-
-        PrintBtn.setBackground(new java.awt.Color(51, 51, 51));
-        PrintBtn.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        PrintBtn.setForeground(new java.awt.Color(255, 255, 255));
-        PrintBtn.setText("Print");
-        PrintBtn.setBorder(null);
-        PrintBtn.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                PrintBtnMouseClicked(evt);
-            }
-        });
-        PrintBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                PrintBtnActionPerformed(evt);
-            }
-        });
+        Amount.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        Amount.setForeground(new java.awt.Color(51, 51, 51));
+        Amount.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Amount.setText("Amount");
 
         Qtytxt.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         Qtytxt.setForeground(new java.awt.Color(255, 255, 255));
@@ -628,6 +600,11 @@ private void printReceipt(String receipt) {
         jLabel18.setBackground(new java.awt.Color(0, 0, 0));
         jLabel18.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
         jLabel18.setText("PRODUCT LIST");
+
+        Amttbl.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        Amttbl.setForeground(new java.awt.Color(51, 51, 51));
+        Amttbl.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Amttbl.setText("Amount");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -667,10 +644,10 @@ private void printReceipt(String receipt) {
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 376, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(18, 18, 18)
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(PrintBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(Amttbl, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(Qtytxt, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(Amount, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(Qtytxt, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(Amttbl, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(13, 13, 13)
@@ -746,12 +723,13 @@ private void printReceipt(String receipt) {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(17, 17, 17)
                                 .addComponent(Amttbl)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(PrintBtn)
+                                .addComponent(Amount)
                                 .addGap(18, 18, 18)
                                 .addComponent(Qtytxt)))
-                        .addGap(0, 0, Short.MAX_VALUE))))
+                        .addGap(0, 24, Short.MAX_VALUE))))
             .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
@@ -811,7 +789,7 @@ private void printReceipt(String receipt) {
                 add.setInt(1, Integer.valueOf(BillId.getText()));
                 add.setString(2, CustNamelbl.getText());
                 add.setString(3, Datelbl.getText());
-                add.setInt(4, Integer.valueOf(Amttbl.getText()));
+                add.setInt(4, Integer.valueOf(Amount.getText()));
                 add.setInt(5, Integer.valueOf(Qtytxt.getText()));
                 int row = add.executeUpdate();
 
@@ -888,7 +866,7 @@ private void printReceipt(String receipt) {
         
         // Menambahkan total harga dari item baru ke total harga keseluruhan
         total = tot + total;
-        Amttbl.setText("" + total);
+        Amount.setText("" + total);
         total = tot + total;
         Update();
         i++;
@@ -898,22 +876,6 @@ private void printReceipt(String receipt) {
     private void AddBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddBtn1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_AddBtn1ActionPerformed
-
-    private void PrintBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PrintBtnMouseClicked
-        MessageFormat header = new MessageFormat ("Form Title");
-        MessageFormat  footer = new MessageFormat ("Print (0, number, integer)");
-        try{
-            PrintRequestAttributeSet set = new HashPrintRequestAttributeSet();
-            set.add(OrientationRequested.LANDSCAPE);
-            Billtbl.print(JTable.PrintMode.FIT_WIDTH, header, footer, true, set, true);
-        } catch (Exception exp){
-            exp.printStackTrace();
-        }        // TODO add your handling code here:
-    }//GEN-LAST:event_PrintBtnMouseClicked
-
-    private void PrintBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PrintBtnActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_PrintBtnActionPerformed
 
     private void jLabel13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel13MouseClicked
        new CategoryNew().setVisible(true);
@@ -944,6 +906,7 @@ private void printReceipt(String receipt) {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton AddBtn1;
     private javax.swing.JButton AddOrderBtn;
+    private javax.swing.JLabel Amount;
     private javax.swing.JLabel Amttbl;
     private javax.swing.JButton BatalBtn;
     private javax.swing.JTextField BillId;
@@ -952,7 +915,6 @@ private void printReceipt(String receipt) {
     private javax.swing.JTable CustomerTable;
     private javax.swing.JLabel Datelbl;
     private javax.swing.JTextField PriceBtl;
-    private javax.swing.JButton PrintBtn;
     private javax.swing.JTable ProductTable;
     private javax.swing.JTextField Qtytb;
     private javax.swing.JLabel Qtytxt;
@@ -963,7 +925,6 @@ private void printReceipt(String receipt) {
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel4;

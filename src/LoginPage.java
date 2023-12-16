@@ -14,6 +14,8 @@ public class LoginPage extends javax.swing.JFrame {
 Connection con = null;
 Statement st = null;
 ResultSet rs = null;
+Statement st1 = null;
+ResultSet rs1 = null;
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
